@@ -23,7 +23,6 @@ package demo.resourceloading;
 import act.Act;
 import act.inject.util.LoadConfig;
 import act.inject.util.LoadResource;
-import act.util.JsonView;
 import org.osgl.mvc.annotation.GetAction;
 
 import java.util.List;
@@ -57,43 +56,36 @@ public class AppEntry {
     public void home() {}
 
     @GetAction("/foo/json")
-    @JsonView
     public Foo fooFromJson() {
         return fromJson;
     }
 
     @GetAction("/foo/yaml")
-    @JsonView
     public Foo fooFromYaml() {
         return fromYaml;
     }
 
     @GetAction("/list/json")
-    @JsonView
     public List<Foo> listFromJson() {
         return listFromJson;
     }
 
     @GetAction("/list/yaml")
-    @JsonView
     public List<Foo> listFromYaml() {
         return listFromYaml;
     }
 
     @GetAction("/int_list")
-    @JsonView
     public int[] intList() {
         return intList;
     }
 
     @GetAction("/map")
-    @JsonView
     public Map<String, String> map() {
         return map;
     }
 
     @GetAction("/double_matrix")
-    @JsonView
     public double[][] doubleMatrix() {
         return dblMatrix;
     }
